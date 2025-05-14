@@ -1,20 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:hello_flutter/pages/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Center(
+            child: Text(
+              "Hello Flutter",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize:30, 
+              ),
+            ),
+          ),
+          backgroundColor: Colors.blueGrey,
+        ),
+        body: Center(
+          child: Text(
+            "Welcom to the Flutter !!",
+            style: TextStyle(fontSize: 25),
+          ),
+        ),
+        backgroundColor: Colors.blueAccent,
+      ),
+    ),
+  );
 }
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner : false,
-      home: homePage()
-    );
-  }
-}
-
